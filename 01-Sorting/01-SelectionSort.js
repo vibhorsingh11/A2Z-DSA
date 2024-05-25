@@ -20,4 +20,4 @@ function selectionSort(arr) {
 
 console.log(selectionSort([13, 46, 24, 52, 20, 9])); //[ 9, 13, 20, 24, 46, 52 ]
 
-//TC:- Best, Average, Worst-> O(n)
+//TC:- Best, Average, Worst-> O(nx2)
