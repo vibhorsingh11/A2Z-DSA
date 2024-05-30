@@ -24,4 +24,33 @@ function longestSubarray(arr, k) {
 
 console.log(longestSubarray([2, 3, 5, 1, 9], 9)); //3
 
-//TC: O(2n) Inner loop does not run every time
+//TC: O(2N) Inner loop does not run every time
+
+//Negative values
+
+function longestSubarrayWithNegatives(arr, k) {
+  const n = arr.length;
+  let map = new Map();
+  let sum = 0;
+  let maxLen = 0;
+  for (let i = 0; i < n; i++) {
+    sum += arr[i];
+    if (sum === k) {
+      maxLen = Math.max(maxLen, i + 1);
+    }
+    //sum of remaining part
+    let rem = sum - k;
+    if (map.has(rem)) {
+      let len = i - map.get(rem);
+      maxLen = Math.max(maxLen, len);
+    }
+    if (!map.has(sum)) {
+      map.set(sum, i);
+    }
+  }
+  return maxLen;
+}
+
+console.log(longestSubarrayWithNegatives([-1, 1, 1], 1)); //3
+
+//TC: O(N) or O(N*logN)
