@@ -41,5 +41,5 @@ function merge(arr, low, mid, high) {
 }
 
 const arr = [3, 2, 8, 5, 1, 4, 23];
-quickSort(arr, 0, [3, 2, 8, 5, 1, 4, 23].length - 1);
+mergeSort(arr, 0, [3, 2, 8, 5, 1, 4, 23].length - 1);
 console.log(arr);
