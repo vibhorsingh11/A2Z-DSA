@@ -20,6 +20,8 @@ function aggressiveCows(stalls, k) {
     high = stalls[n - 1] - stalls[0];
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
+    //if false then right side distances cannot be possible
+    // hence remove them
     if (canWePlace(stalls, mid, k)) {
       low = mid + 1;
     } else {
