@@ -38,5 +38,8 @@ function helper(col, res, board, leftRow, upperLeftRow, lowerLeftRow) {
   }
 }
 
+console.log(solveNQueens(4));
+//[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
+
 //TC: O(N!)
 //SC: O(N)
