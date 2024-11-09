@@ -13,6 +13,8 @@ function nMeetings(start, end) {
   }
 
   arr.sort((a, b) => a.end - b.end);
+  //may have to return the positions of the meetings
+  //if the interviewer asks for the positions of the meetings
   let count = 1,
     freeTime = arr[0].end,
     ds = [arr[0].pos];
